@@ -5,48 +5,41 @@
 
 import sys
 
-def motor_inferencia(glic, sintoma):
+def motor_inferencia(glic, clas):
     # PACIENTE HIPOGLICEMICO
     if (glic < 70):
-        print("Pelo teste de Glicemia em Jejum (GJ), o paciente não apresenta riscos de adquirir Diabetes Mellitus, mas o índice glicemico indica hipoglicemia.")
+        print("O índice glicemico indica hipoglicemia.")
 
     # NORMAL 
     elif (70 <= glic < 100):
-        # PACIENTE COM SINTOMAS
-        if (sintoma > 0):
-            print("Glicemia em Jejum normal, mas o paciente apresenta sintomas. Recomendação: realizar teste adicional TTGO.")
+        if (clas == "Alto" or clas == "Muito Alto"):
+            print("Realizar teste adicional TTGO.")
         
-        # PACIENTE SEM SINTOMAS    
         else:
             print("Paciente saudável")
 
     # PRE DIABETES
     elif (100 <= glic <= 125):
-        # PACIENTE COM SINTOMAS
-        if (sintoma > 0):
-            print("Paciente com alta suspeita de Diabetes Mellitus. Recomendação: realizar teste de TTGO para confirmação.")
-            
-        # PACIENTE SEM SINTOMAS    
-        else:
-            print("Paciente pré-diabético. Recomendação: acompanhamento nutriocinal e atividade física.")
+        print("Realizar teste adicional TTGO.")
+        
     
     # DIABETES
     elif (glic >= 126):
-        # PACIENTE COM SINTOMAS
-        if (sintoma > 0):
-            print("Paciente com Diabetes Mellitus. Recomendação: iniciar tratamento médico urgente.")
-        # PACIENTE SEM SINTOMAS
-        else:
-            print("Paciente com alteração na glicose. Recomendação: teste adicional de confirmação, como Glicose em Jejum, TTGO ou HbA1c (preferencialmente o mesmo teste).")
+            print("Realizar teste adicional GJ, HbA1c ou TTGO.")
+        
 
-
-# PERGUNTAS DOS SINTOMAS
-perguntas = [  
-    "O paciente apresentou Polidipsia (sede excessiva)?",
-    "O paciente apresentou Poliúria (urinar em excesso)?",
-    "O paciente apresentou Polifagia (fome excessiva)?",
-    "O paciente apresentou perda de peso inexplicada?"
-]
+# CLASSIFICACAO NO FINDRISC
+def func_findisc(pont):
+    if pont < 7:
+        return "Baixo"
+    elif 7 <= pont <= 11:
+        return "Levemente elevado"
+    elif 12 <= pont <= 14:
+        return "Moderado"
+    elif 15 <= pont <= 20:
+        return "Alto"
+    elif pont >= 20:
+        return "Muito alto"
 
 
 # COLETANDO GLICEMIA
@@ -61,19 +54,16 @@ except ValueError:
 sintomas = 0
 
 
-# COLETANDO SINTOMAS
-for p in perguntas:
-    resposta = input(f"{p} ")
-    if resposta == "s":
-        sintomas += 1
-    elif resposta != "n":
-        print("Caractere digitado é inválido!")
-        sys.exit()
+# COLETANDO FINDRISC
+pontuacao = int(input("Digite a pontuação total de riscos: "))
+classificacao = func_findisc(pontuacao)
+
 
 
 # CHAMANDO SISTEMA ESPECIALISTA
 print("----- RESULTADO -----")
-motor_inferencia(glicemia, sintomas)
+print(f"Classificacao com base na pontuação apresentada: {classificacao}")
+motor_inferencia(glicemia, classificacao)
 
 
 
