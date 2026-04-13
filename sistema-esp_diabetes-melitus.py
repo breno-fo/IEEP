@@ -21,7 +21,6 @@ def motor_inferencia(glic, clas):
     # PRE DIABETES
     elif (100 <= glic <= 125):
         print("Realizar teste adicional TTGO.")
-        
     
     # DIABETES
     elif (glic >= 126):
