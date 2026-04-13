@@ -58,7 +58,6 @@ pontuacao = int(input("Digite a pontuação total de riscos: "))
 classificacao = func_findisc(pontuacao)
 
 
-
 # CHAMANDO SISTEMA ESPECIALISTA
 print("----- RESULTADO -----")
 print(f"Classificacao com base na pontuação apresentada: {classificacao}")
