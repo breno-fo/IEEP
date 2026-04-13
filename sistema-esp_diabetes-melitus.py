@@ -1,6 +1,6 @@
 # SISTEMA ESPECIALISTA - DETECTOR DE DIABETES MELLITUS
 # FONTE DA PESQUISA: https://diretriz.diabetes.org.br/diagnostico-de-diabetes-mellitus/
-# ACESSO EM 06/04/2026  
+# ACESSO EM 13/04/2026  
 
 
 import sys
