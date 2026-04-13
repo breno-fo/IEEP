@@ -49,10 +49,6 @@ except ValueError:
     sys.exit()
 
 
-# INICIALIZANDO SINTOMAS (É ASSUMIDO QUE NÃO HÁ NENHUM)
-sintomas = 0
-
-
 # COLETANDO FINDRISC
 pontuacao = int(input("Digite a pontuação total de riscos: "))
 classificacao = func_findisc(pontuacao)
