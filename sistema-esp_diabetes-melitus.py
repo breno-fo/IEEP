@@ -31,7 +31,7 @@ def motor_inferencia(glic, sintoma):
             print("Paciente pré-diabético. Recomendação: acompanhamento nutriocinal e atividade física.")
     
     # DIABETES
-    elif (glic > 125):
+    elif (glic >= 126):
         # PACIENTE COM SINTOMAS
         if (sintoma > 0):
             print("Paciente com Diabetes Mellitus. Recomendação: iniciar tratamento médico urgente.")
