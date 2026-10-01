@@ -15,14 +15,14 @@ INSERT INTO avaliacoes (id_aluno, id_disciplina, nota) VALUES (1, ),
 
 
 
-breno id=1 	    -> 10 mat (id=1), 9 fis (id=2), 8 bio (id=3), 7 pt (id=4), X hist (id=5), 10 pirc (id=6)
+breno          id=1 	    -> 10 mat (id=1), 9 fis (id=2), 8 bio (id=3), 7 pt (id=4), X hist (id=5), 10 pirc (id=6)
 
-lucas ma id=2       -> 9.5 mat, 5 fis, X bio, 5.6 pt, 8.5 hist, 9.9 pirt
+lucas ma       id=2       -> 9.5 mat, 5 fis, X bio, 5.6 pt, 8.5 hist, 9.9 pirt
 
-lucas nao ma id=3   -> 5 mat, 5 fis, 5 bio, 5 pt, 5 hist, 5 pirt
+lucas nao ma   id=3       -> 5 mat, 5 fis, 5 bio, 5 pt, 5 hist, 5 pirt
 
-pedro id=4 	    -> 7.7 mat, 2.2 fis, 8.2 bio, 7.5 pt, 4.3 hist, 9.3 pirt
+pedro          id=4 	    -> 7.7 mat, 2.2 fis, 8.2 bio, 7.5 pt, 4.3 hist, 9.3 pirt
 
-esley id=5          -> NENHUMA
+esley          id=5       -> NENHUMA
 
-luan id=6           -> X mat, X fis, X bio, 7 pt, 5 hist, 10 pirt
+luan           id=6       -> X mat, X fis, X bio, 7 pt, 5 hist, 10 pirt
